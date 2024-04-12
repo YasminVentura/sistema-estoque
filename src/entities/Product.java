@@ -5,6 +5,14 @@ public class Product {
     public double price;
     public int quantity;
 
+    //criar um contrutor para garantir que o usuário insira os dados
+    public Product (String name, double price, int quantity) {
+        //this - serve para referenciar o objeto(Public String name)
+        this.name = name;
+        this.price = price;
+        this.quantity = quantity;
+    }
+
     public double totalValueInStock (){
         return price * quantity;
     }
