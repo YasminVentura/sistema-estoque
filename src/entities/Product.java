@@ -1,0 +1,26 @@
+package entities;
+
+public class Product {
+    public String name;
+    public double price;
+    public int quantity;
+
+    public double totalValueInStock (){
+        return price * quantity;
+    }
+
+    //usa o valor do quantity(da classe) e soma com o quantity(atributo)
+    public void addProducts(int quantity){
+        this.quantity += quantity;
+    }
+
+    //saida estoque
+    public void removeProducts(int quantity) {
+        this.quantity -= quantity;
+    }
+
+    //toString -> converter o objeto produto em string
+    public String toString() {
+        return name + ", $" + String.format("%.2f", price) + ", " + quantity + " units, Total: $" + String.format("%.2f", totalValueInStock());
+    }
+}
